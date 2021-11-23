@@ -5,11 +5,12 @@ nav ul{
 nav li{
     display: inline;
     padding-right: 20px;
+    
 }
   
 nav{
     background-color: #c1d7f7;
-    padding: 25px 0;    
+    padding: 25px;    
     text-align: center;   
 }
 .nav_links a{
@@ -21,11 +22,13 @@ nav{
 .nav_links a:hover {
     background-color: #f3e039;
     color: black;
+    padding: 5px;
 }
 .nav_links .current{
     background-color: black;
     color: white;
     text-decoration: underline;
+    padding: 5px;
 }
 body {
     background: rgb(235, 241, 181);
@@ -40,26 +43,38 @@ header {
 a:visited{
     color: blue;
 }
+/* working(ish) footer that does not use flex - look up how to have a good flex footer
+other footer below was my atempt at flex footer from stack overflow - don't work */
 footer{
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: black;
     color: white;
-    padding-top: 20px;
+    padding-top: 18px;
     padding-bottom: 15px;
     text-align: center;
+}
+#footer {
+  background-color: black;
+  color: white;
+  flex: 0 0 50px;
+  margin-top: auto;
 }
 
 
 .soccer-pics{
-    grid-column: 1 / -1;
+    /* display: grid; */
+    grid-column: 1 / 4;
     /* max-height: 600px;
     max-width: 1000px; */
-    grid-row: 2 / span 1;
-    overflow: hidden;
+    grid-row: 2 / span 4;
+    /* overflow: hidden; */
     height: auto;
     width: auto;
+    /* display: flex;
+    flex-items */
+    /* padding-bottom: 30px; */
 }
 
 .home-text{
@@ -81,3 +96,30 @@ footer{
 .athletics-text{
     padding: 20px;
 }
+
+.si-pics{
+    /* display: grid; */
+    padding-bottom: 0px;
+}
+
+.si-text{
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ul.b{
+    list-style-type: square;
+}
+ul.a{
+    list-style-type: square;
+    list-style-position: outside;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+/* figure out how to use grid to put on pictures in athletics and maybe academics, 
+add flex(hw6) somewhere, load up pages with more content, add favicon and skip to content 
+after hitting tab on each page(see hw6?) */
